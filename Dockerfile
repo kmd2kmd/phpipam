@@ -7,7 +7,7 @@ ENV WEB_REPO /var/www/html
 
 # Install required deb packages
 RUN apt-get update && \
-	apt-get install -y git php-pear php5-curl php5-mysql php5-json php5-gmp php5-mcrypt php5-ldap libgmp-dev libmcrypt-dev && \
+	apt-get install -y git php-pear php5-curl php5-mysql php5-json php5-gmp php5-mcrypt php5-ldap php5-gd libjpeg-dev libpng-dev libvpx-dev libgmp-dev libmcrypt-dev && \
 	rm -rf /var/lib/apt/lists/*
 
 # Configure apache and required PHP modules
