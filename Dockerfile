@@ -10,11 +10,12 @@ RUN apt-get update && \
 	apt-get install -y git php-pear php5-curl php5-mysql php5-json php5-gmp php5-mcrypt php5-ldap libgmp-dev libmcrypt-dev && \
 	rm -rf /var/lib/apt/lists/*
 
-# Configure apache and required PHP modules 
+# Configure apache and required PHP modules
 RUN docker-php-ext-configure mysqli --with-mysqli=mysqlnd && \
 	docker-php-ext-install mysqli && \
 	docker-php-ext-install pdo_mysql && \
-	docker-php-ext-install gettext && \ 
+	docker-php-ext-install gettext && \
+	docker-php-ext-install pcntl && \
 	ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h && \
 	docker-php-ext-configure gmp --with-gmp=/usr/include/x86_64-linux-gnu && \
 	docker-php-ext-install gmp && \
@@ -36,4 +37,3 @@ RUN cp ${WEB_REPO}/config.dist.php ${WEB_REPO}/config.php && \
 	${WEB_REPO}/config.php
 
 EXPOSE 80
-
