@@ -67,16 +67,16 @@ services:
   mysql:
     image: mysql:5.6
     environment:
-      - MYSQL_ROOT_PASSWORD=my-secret-pw
+      - MYSQL_ROOT_PASSWORD=Passw0rd!
     restart: always
     volumes:
       - db_data:/var/lib/mysql
   ipam:
     depends_on:
       - mysql
-    image: pierrecdn/phpipam
+    image: kmd2kmd/phpipam
     environment:
-      - MYSQL_ENV_MYSQL_ROOT_PASSWORD=my-secret-pw
+      - MYSQL_ENV_MYSQL_ROOT_PASSWORD=Passw0rd!
     ports:
       - "80:80"
 volumes:
