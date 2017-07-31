@@ -1,0 +1,4 @@
+#/etc/cron.d/ipam: crontab fragment for phpipam
+# update host statuses exery 15 minutes
+*/15 * * * * /usr/local/bin/php /usr/local/www/phpipam/functions/scripts/pingCheck.php
+*/15 * * * * /usr/local/bin/php /usr/local/www/phpipam/functions/scripts/discoveryCheck.php
