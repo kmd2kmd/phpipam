@@ -1,8 +1,10 @@
 # docker-phpipam
 
 ![phpIPAM logo](http://phpipam.net/wp-content/uploads/2014/12/phpipam_logo_small.png)
-phpIPAMはオープンソースのWeb型IPアドレス管理アプリケーションです。軽量でシンプルな操作が特徴です。
-phpIPAMは、Miha Petkovsekによって開発、保守され、GPL v3ライセンスでリリースされ、プロジェクトのソースは[こちら](https://github.com/phpipam/phpipam)です。
+
+phpIPAMはオープンソースのWeb型IPアドレス管理アプリケーションです。軽量でシンプルな操作が特徴です。  
+phpIPAMは、Miha Petkovsekによって開発、保守されています。ライセンスはGPL v3です。  
+プロジェクトのソースは[こちら](https://github.com/phpipam/phpipam)です。  
 [phpIPAM homepage](http://phpipam.net)
 
 
@@ -71,4 +73,5 @@ volumes:
   db_data:
 ```
 
-# 今後の予定
+## 今後の予定
+DBの認証情報入力を自動化
