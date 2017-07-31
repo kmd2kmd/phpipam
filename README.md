@@ -83,6 +83,8 @@ volumes:
   db_data:
 ```
 
+[docker-compose.yml](/docker-compose.yml)
+
 And next :
 
 ```bash 
