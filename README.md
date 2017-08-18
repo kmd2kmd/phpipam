@@ -20,7 +20,7 @@ $ docker run --name phpipam-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -v /my_dir
 
 データを`/my_dir/phpipam`に保存し、DBのrootパスワードを設定する。
 
-### Phpipam 
+### phpipam 
 
 ```bash
 $ docker run -ti -d -p 80:80 --name ipam --link phpipam-mysql:mysql pierrecdn/phpipam
