@@ -7,7 +7,6 @@ phpIPAMは、Miha Petkovsekによって開発、保守されています。ラ�
 プロジェクトのソースは[こちら](https://github.com/phpipam/phpipam)です。  
 [phpIPAM homepage](http://phpipam.net)
 
-
 ## 使用方法
 
 ### Mysql
@@ -15,15 +14,15 @@ phpIPAMは、Miha Petkovsekによって開発、保守されています。ラ�
 phpipam専用のMySQLデータベースを実行する。
 
 ```bash
-$ docker run --name phpipam-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -v /my_dir/phpipam:/var/lib/mysql -d mysql:5.6
+docker run --name phpipam-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -v /my_dir/phpipam:/var/lib/mysql -d mysql:5.6
 ```
 
 データを`/my_dir/phpipam`に保存し、DBのrootパスワードを設定する。
 
-### phpipam 
+### phpipam
 
 ```bash
-$ docker run -ti -d -p 80:80 --name ipam --link phpipam-mysql:mysql pierrecdn/phpipam
+docker run -ti -d -p 80:80 --name ipam --link phpipam-mysql:mysql pierrecdn/phpipam
 ```
 
 2つのコンテナをリンクしてHTTPポート(80)を公開する。
