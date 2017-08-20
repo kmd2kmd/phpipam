@@ -1,7 +1,7 @@
 FROM php:5.6-apache
 MAINTAINER kmd2kmd
 
-ENV PHPIPAM_SOURCE https://github.com/phpipam/phpipam/archive/
+ENV PHPIPAM_SOURCE https://github.com/phpipam/phpipam/archive
 ENV PHPIPAM_VERSION 1.3
 ENV WEB_REPO /var/www/html
 
@@ -29,8 +29,8 @@ RUN docker-php-ext-configure mysqli --with-mysqli=mysqlnd && \
 COPY php.ini /usr/local/etc/php/
 
 # copy phpipam sources to web dir
-ADD ${PHPIPAM_SOURCE}/${PHPIPAM_VERSION}.tar.gz /tmp/
-RUN	tar -xzf /tmp/${PHPIPAM_VERSION}.tar.gz -C ${WEB_REPO}/ --strip-components=1
+ADD ${PHPIPAM_SOURCE}/${PHPIPAM_VERSION}.tar.gz /tmp
+RUN mv /tmp/phpipam-${PHPIPAM_VERSION}/* ${WEB_REPO}/
 
 # copy phpipam crontab
 COPY ipam /etc/cron.d/
