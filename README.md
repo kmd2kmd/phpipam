@@ -2,10 +2,10 @@
 
 ![phpIPAM logo](http://phpipam.net/wp-content/uploads/2014/12/phpipam_logo_small.png)
 
-phpIPAMはオープンソースのWeb型IPアドレス管理アプリケーションです。軽量でシンプルな操作が特徴です。  
-phpIPAMは、Miha Petkovsekによって開発、保守されています。ライセンスはGPL v3です。  
-プロジェクトのソースは[こちら](https://github.com/phpipam/phpipam)です。  
-[phpIPAM homepage](http://phpipam.net)
+* phpIPAMはオープンソースのWeb型IPアドレス管理アプリケーションです。軽量でシンプルな操作が特徴です。
+* phpIPAMは、Miha Petkovsekによって開発、保守されています。ライセンスはGPL v3です。
+* プロジェクトのソースは[こちら](https://github.com/phpipam/phpipam)で。
+* [phpIPAM homepage](http://phpipam.net)
 
 ## 使用方法
 
@@ -43,11 +43,11 @@ docker run -ti -d -p 80:80 --name ipam --link phpipam-mysql:mysql pierrecdn/phpi
 
 ![step3](https://cloud.githubusercontent.com/assets/4225738/8746790/0c434bf6-2c8d-11e5-9ae7-b7d1021b7aa0.png)
 
-* 完了 ! 
+* 完了 !
 
 ![done](https://cloud.githubusercontent.com/assets/4225738/8746792/0d6fa34e-2c8d-11e5-8002-3793361ae34d.png)
 
-### Docker compose 
+### Docker compose
 
 ```yaml
 version: '2'
@@ -73,5 +73,5 @@ volumes:
 ```
 
 ## 今後の予定
+
 DBの認証情報入力を自動化
-SNMPモジュールの有効化
